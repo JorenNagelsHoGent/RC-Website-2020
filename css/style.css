@@ -62,11 +62,25 @@ nav ul{
 
 /* body */
 
+.main{
+    padding: 25rem;
+    color: black;
+}
+
+.main h1{
+    text-align: center;
+}
+
+.main p{
+    text-align: center;
+}
+
 .main p{
     display: block;
     margin: 0;
     padding: 0;
 }
+
 
 /* Footer */
 
