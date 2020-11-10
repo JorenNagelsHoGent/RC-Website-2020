@@ -34,22 +34,38 @@ nav {
   font-weight: lighter;
   position: fixed;
   width: 100%;
-  left: 0;
-  top: 0;
   z-index : 2;
-
+  display: flex;
 }
+
+nav a{
+    padding: 2rem;
+    height: 40px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+nav ul li{
+}
+
+.whitespace{
+    flex-grow: 1;
+}
+
 
 /* Top nav logo */
-.logo {
-  display: inline-block;
-  font-size: 2.2rem;
-  margin: 1.7rem 0.4rem 1rem 1rem;
-}
 
 /* Style the links inside the navigation bar */
 
 /* Footer */
+
 
 
 footer {
