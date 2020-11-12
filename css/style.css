@@ -47,10 +47,13 @@ nav {
 }
 
 nav a{
-    padding: 2rem;
+    margin: 2rem;
     height: 40px;
+    padding-bottom: 0.3rem;
 }
-
+nav .current {
+    border-bottom: 1px solid currentColor ;
+}
 nav ul{
     list-style-type: none;
     margin: 0;
@@ -58,6 +61,9 @@ nav ul{
     align-items: center;
     text-align: center;
     display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
 }
 
 .whitespace{
