@@ -1,0 +1,35 @@
+body {
+    background-color: whitesmoke;
+    font: black
+}
+nav {
+    background-color: #151618;
+}
+.news{
+    padding-top: 11rem;
+    padding-bottom: 10rem;
+}
+.newsCard {
+    width: 30%;
+    height: 30rem;
+    margin: 1.5%;
+    display: inline-block;
+    filter: drop-shadow(2rem 2rem 3rem black)
+}
+
+.newsCard header{
+    background-color: black;
+    font-size: 1.8rem;
+    margin-top: -0.7rem;
+    padding: 2rem;
+    border-top: 5px solid rgb(32, 32, 114);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.newsCard img{
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
