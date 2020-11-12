@@ -4,6 +4,7 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;
   line-height: 1.5;
+  height: 100%;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
+  height: 100%;
 }
 
 
@@ -40,6 +42,7 @@ nav {
   width: 100%;
   z-index : 2;
   display: flex;
+  background-color: black;
 }
 
 nav a{
@@ -58,6 +61,19 @@ nav ul{
 
 .whitespace{
     flex-grow: 1;
+}
+
+/* Bacground */
+
+.BG {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#BG1{
+  background-image: url("../img/main pic.jpg");
+  min-height: 100%;
 }
 
 /* body */
@@ -80,6 +96,9 @@ nav ul{
     margin: 0;
     padding: 0;
 }
+
+
+
 
 
 /* Footer */
