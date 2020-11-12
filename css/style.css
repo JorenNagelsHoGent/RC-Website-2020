@@ -34,6 +34,7 @@ a:hover {
 }
 
 nav {
+  background-color: black;
   font-size: 20px;
   font-weight: lighter;
   position: fixed;
@@ -63,7 +64,8 @@ nav ul{
 /* body */
 
 .main{
-    padding: 25rem;
+    padding-top: 25rem;
+    padding-bottom: 25rem;
     color: black;
 }
 
