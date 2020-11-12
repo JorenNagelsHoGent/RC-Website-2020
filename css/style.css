@@ -43,7 +43,7 @@ nav {
   width: 100%;
   z-index : 2;
   display: flex;
-  background-color: black;
+  background-color:rgba(0,0,0,0.50);
 }
 
 nav a{
@@ -67,40 +67,102 @@ nav ul{
 /* Bacground */
 
 .BG {
+  position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #BG1{
-  background-image: url("../img/main pic.jpg");
+  background-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.25) 100%, rgba(0,212,255,1) 100%), url("../img/home.png");
   min-height: 100%;
+  
 }
-
+#BG2{
+  background-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.25) 100%, rgba(0,212,255,1) 100%), url("../img/rl.png");
+  min-height: 100%;
+  
+}
+#BG3{
+  background-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.25) 100%, rgba(0,212,255,1) 100%), url("../img/lol.png");
+  min-height: 100%;
+  
+}
 /* body */
 
 .main{
-    padding-top: 25rem;
-    padding-bottom: 25rem;
-    color: black;
-}
-
-.main h1{
+    position: absolute;
+    top: 35%;
+    left: 0;
     text-align: center;
+    width: 100%;
+    color: white;
 }
-
-.main p{
-    text-align: center;
+.main h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
 }
-
 .main p{
     display: block;
-    margin: 0;
+    margin: auto;
     padding: 0;
+    max-width: 45%;
+}
+.scroll {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+.scroll i {
+  margin-left: 0.8rem;
+  vertical-align: middle;
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+  animation: bounce 3.6s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  5.55556% {
+    transform: translateY(0);
+  }
+  11.11111% {
+    transform: translateY(0);
+  }
+  22.22222% {
+    transform: translateY(15px);
+  }
+  27.77778% {
+    transform: translateY(0);
+  }
+  33.33333% {
+    transform: translateY(15px);
+  }
+  44.44444% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 
 
+#home {
+  
+}
+
+#rl {
+  
+}
 
 
 /* Footer */
