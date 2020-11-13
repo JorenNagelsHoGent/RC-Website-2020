@@ -4,32 +4,38 @@ body {
 }
 nav {
     background-color: #151618;
+    filter: drop-shadow(1rem 1rem 3rem black)
 }
 .news{
     padding-top: 11rem;
     padding-bottom: 10rem;
 }
 .newsCard {
+    font-size: 1.7rem;
     width: 30%;
-    height: 30rem;
     margin: 1.5%;
     display: inline-block;
-    filter: drop-shadow(2rem 2rem 3rem black)
+    filter: drop-shadow(1.5rem 1.5rem 3rem black)
+}
+.newsCard:hover {
+    width: 29%;
+    margin: 2% 2% 1.5% 2%;
+    font-size: 1.65rem !important;
 }
 
 .newsCard header{
     background-color: black;
-    font-size: 1.8rem;
     margin-top: -0.7rem;
     padding: 2rem;
     border-top: 5px solid rgb(32, 32, 114);
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
 }
 .newsCard img{
     margin: 0;
     width: 100%;
     padding: 0;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
 }
+

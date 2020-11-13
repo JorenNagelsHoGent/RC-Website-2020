@@ -1,0 +1,31 @@
+body {
+    background-color: whitesmoke;
+    color: black;
+}
+nav {
+    background-color: #151618;
+    filter: drop-shadow(1rem 1rem 3rem black)
+}
+
+article {
+    padding-top: 10rem;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+article header{
+    font-size: 5rem;
+    font-weight: 500;
+}
+article img {
+    border-radius: 1.5rem;
+    width: 100%;
+}
+article .articleBody {
+    font-size: 2rem;
+}
+
+.hidden {
+    display: none;
+}
