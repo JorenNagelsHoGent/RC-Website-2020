@@ -1,0 +1,59 @@
+nav {
+    background-color: #151618;
+    filter: drop-shadow(1rem 1rem 3rem black)
+}
+
+.TeamBG {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#TeamBGPluto{
+    background-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.25) 100%, rgba(0,212,255,1) 100%), url("../img/pluto.jpg");
+    height: 40%;
+    width: 100%;
+    padding-top:8rem;
+}
+
+.TeamheaderOdd{
+    display: inline-block;
+    text-align: left;
+    margin-left: 25%;
+}
+
+.TeamheaderEven{
+    display: block;
+    text-align: right;
+    margin-right: 25%;
+}
+
+
+.TeamTable{
+    margin: auto;
+    margin-top: -22rem;
+    text-align: center;
+}
+
+.TeamTable td{
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+#TeamOverview{
+    text-align: left;
+}
+
+.main{
+    top: 40%;
+}
+
+#odd {
+    width: 150%;
+}
+
+#even{
+    margin-right: 25%;
+}
