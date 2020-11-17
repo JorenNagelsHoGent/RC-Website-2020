@@ -4,56 +4,48 @@ nav {
 }
 
 .TeamBG {
+    display: flex;
+    align-items: center;
     position: relative;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#TeamBGPluto{
-    background-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.25) 100%, rgba(0,212,255,1) 100%), url("../img/pluto.jpg");
-    height: 40%;
+    height: 46%;
     width: 100%;
-    padding-top:8rem;
 }
 
-.TeamheaderOdd{
-    display: inline-block;
-    text-align: left;
-    margin-left: 25%;
+.main {
+    display: flex;
+    top: auto;
+    align-items: center;
 }
 
-.TeamheaderEven{
-    display: block;
-    text-align: right;
-    margin-right: 25%;
+#TeamBGESports {
+    background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.25) 100%, rgba(0, 212, 255, 1) 100%), url("../img/rc_lol.png");
+    padding-top: 7.9rem;
+    height: 92%;
 }
 
+#TeamBGPluto {
+    background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.25) 100%, rgba(0, 212, 255, 1) 100%), url("../img/pluto.jpg");
+}
 
-.TeamTable{
-    margin: auto;
-    margin-top: -22rem;
+#TeamBGSaturn {
+    background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.25) 100%, rgba(0, 212, 255, 1) 100%), url("../img/saturn.jpg");
+}
+
+.Teamheader {
+    padding: 0;
+    width: 50%;
+}
+
+.TeamTable {
+    width: 50%;
+    flex-grow: 1;
     text-align: center;
 }
 
-.TeamTable td{
+.TeamTable td {
     font-size: 4rem;
     padding: 1rem;
-}
-
-#TeamOverview{
-    text-align: left;
-}
-
-.main{
-    top: 40%;
-}
-
-#odd {
-    width: 150%;
-}
-
-#even{
-    margin-right: 25%;
 }
