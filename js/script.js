@@ -1,7 +1,13 @@
-function ClickOnNewsArticle(id) {
 
-    let article = document.getElementById(id)
-    
-    article.className="show"
-    
-    } 
+
+
+function reveal() {
+    let menuContent = document.querySelector('.menu-content');
+    if(menuContent.style.display===""){
+        menuContent.style.display="block";
+     } else {
+        menuContent.style.display="";
+     }
+
+
+}

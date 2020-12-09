@@ -34,19 +34,7 @@
 	
 	<!-- Navigation -->
 
-		<nav>
-			<a href="index.html"><img src="/img/logo.png" width=40px></a>
-			<div class="whitespace"></div>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a class="current" href="news.html">News</a></li>
-				<li><a href="teams.html">Teams</a></li>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			<div class="whitespace"></div>
-			<a href="log_in_page.html">log in</i></a>
-		</nav>
+    <?php require_once "navbar.php" ?>
 
 	<!-- Body -->
 	<div class="news">
@@ -90,38 +78,7 @@
 
 
 	<!--- footer -->
-	<footer>
-        <div class="column" id="c1">
-            <img src="img/logo.png" height="40" width="40">
-            <span id="RCFooter">Rocket Core</span><BR>
-            <a href="https://www.twitch.tv/rocket_core/" target="_blank"><i class="fab fa-twitch"></i></a>
-            <a href="http://discord.rocketcorerl.com" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://twitter.com/rc_rocketcore" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/rocket_core" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/channel/UCI_eLjh_rFn0f4mL8HCztww" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-        <div class="column" id="c2">
-            <table>
-                <tr>
-                    <th><a href="index.php">Home</a></th>
-                    <th><a href="news.php">News</a></th>
-                   
-                </tr>
-                <tr>
-                    
-                    <th><a href="roster.php">Roster</a></th>
-                    <th><a href="events.php">Events</a></th>
-                </tr>
-                <tr>
-                    
-                    <th><a href="contact.php">Contact</a></th>
-                </tr>
-            </table>
-        </div>
-        <div id="c3">
-            ©rocketcore 2020
-        </div>
-	</footer>
+	<?php require_once "footer.html" ?>
 
 </body>
 

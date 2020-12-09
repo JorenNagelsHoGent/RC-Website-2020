@@ -24,7 +24,7 @@ nav {
 }
 
 .newsCard header{
-    background-color: black;
+    background-color: #151618;
     margin-top: -0.7rem;
     padding: 2rem;
     border-top: 5px solid rgb(32, 32, 114);
@@ -38,4 +38,3 @@ nav {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
 }
-
