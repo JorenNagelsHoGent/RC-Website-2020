@@ -48,7 +48,7 @@ if (get('action') == 'logout') {
 	);
 
 	// Redirect the user to Discord's revoke page
-	header('content_type:x-www-form-urlencoded','Location: https://discordapp.com/api/oauth2/token/revoke' . '?' . http_build_query($params));
+	header('content_type:x-www-form-urlencoded', 'Location: https://discordapp.com/api/oauth2/token/revoke' . '?' . http_build_query($params));
 	$_SESSION = array();
 }
 
@@ -130,18 +130,20 @@ function session($key, $default = NULL)
 	<div class="BG" id="BG1">
 		<div class="main" id="home">
 			<h1>Rocket Core</h1>
-			<p>Rocket Core is a Rocket League and League of Legends Tournament and Esports Organisation that fosters an enjoyable environment for all its staff, members and everyone involved.</p>
+			<p>Our mission is to create opportunities for players by hosting professional esports events!</p>
 		</div>
 		<a href="#BG2" class="scroll">
 			Rocket League
-			<i class="fas fa-angle-double-down"></i>
+			<i class="fas fa-angle-double -down"></i>
 		</a>
 	</div>
 
 	<div class="BG" id="BG2">
 		<div class="main" id="rl">
 			<h1>Rocket League</h1>
-			<p>RL text</p>
+			<p>We offer a variety of Rocket League events, from our own weekly tournaments to our fully fletched professional events! Click <a href="./events.php">here</a> to see our current events.</p>
+			<br>
+			<p>Outside our events we also offer players to represent us by having our own esports teams! Click <a href="./teams/rlteams.php">here</a> to see the current roster.</p>
 
 		</div>
 		<a href="#BG3" class="scroll">
@@ -153,7 +155,9 @@ function session($key, $default = NULL)
 	<div class="BG" id="BG3">
 		<div class="main" id="lol">
 			<h1>League of Legends</h1>
-			<p>LoL text</p>
+			<p>We have a wide variety of League of legends teams ranging from small community teams to our top-tier esports teams with professional coaching and managing!</p>
+			<br>
+			<p>Do you think you have what it takes to join? Fill in an application and you'll soon be playing for Rocket Core Esports! Click <a href="./teams/rlteams.php">here</a> to see the current roster.</p>
 
 		</div>
 	</div>

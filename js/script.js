@@ -1,8 +1,7 @@
 
+function reveal(cl) { 
+    let menuContent = document.querySelector('.' + cl);
 
-
-function reveal() {
-    let menuContent = document.querySelector('.menu-content');
     if(menuContent.style.display===""){
         menuContent.style.display="block";
      } else {
@@ -11,3 +10,10 @@ function reveal() {
 
 
 }
+
+window.onclick = function(e) {
+    if (!e.target.matches('.teams')) {
+      let dropdown = document.getElementsByClassName("teams-menu");
+      dropdown.style.display="";
+    }
+  }

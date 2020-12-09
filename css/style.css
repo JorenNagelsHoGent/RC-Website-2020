@@ -30,12 +30,9 @@ a:hover {
 
 
 /*top navigation */
-.navigate {
-  display: flex;
-  height: 80px;
-}
 
 nav {
+  height: 80px;
   background-color: black;
   font-size: 20px;
   font-weight: lighter;
@@ -45,6 +42,11 @@ nav {
   display: flex;
   background-color: rgba(0, 0, 0, 0.70);
   text-align: center;
+}
+
+.active {
+  text-decoration: underline !important;
+  text-underline-offset: 10px;
 }
 
 nav a {
@@ -91,11 +93,38 @@ nav ul {
   right: 10px;
   background-color: rgba(0, 0, 0, 0.70);
   width: 300px;
-  z-index: 100;
+  z-index: -10;
   line-height: 3.5;
   text-align: left;
   border-radius: 5px;
   animation: fadeIn ease 0.4s;
+}
+
+.teams-menu {
+  display: none;
+  position: absolute;
+  font-size: 1rem !important;
+  top: 80px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.70);
+  width: 100%;
+  z-index: -10;
+  text-align: center;
+  vertical-align: middle;
+  animation: fadeIn ease 0.4s;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.teams-menu .game {
+  vertical-align: middle;
+  text-align: center;
+  display: inline;
+  margin: 4rem;
+  font-size: 2rem;
+}
+.game img {
+  /* margin-top: 1rem; */
+  vertical-align: middle;
 }
 @keyframes fadeIn {
   0% {
@@ -109,6 +138,13 @@ nav ul {
   padding: 1rem;
 
 }
+nav .avatarBtn{
+  vertical-align: middle;
+  height: 50px;
+  margin: auto 2rem;
+
+}
+
 nav .logo {
   margin-top: auto;
   margin-bottom: auto;
@@ -127,7 +163,6 @@ hr {
 }
 .profile {
   vertical-align: middle;
-
 
 }
 .profile .avatarDropdown {
@@ -161,19 +196,19 @@ hr {
 }
 
 #BG1 {
-  background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.25) 100%, rgba(0, 212, 255, 1) 100%), url("../img/home.png");
+  background-image: linear-gradient(to top, transparent, 20% ,black ), url("../img/home.png");
   min-height: 100%;
 
 }
 
 #BG2 {
-  background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.25) 100%, rgba(0, 212, 255, 1) 100%), url("../img/rl.png");
+  background-image: linear-gradient(to top, transparent, 10% ,black ), url("../img/rl.png");
   min-height: 100%;
 
 }
 
 #BG3 {
-  background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.25) 100%, rgba(0, 212, 255, 1) 100%), url("../img/lol.png");
+  background-image: linear-gradient(to top, transparent, 10% ,black ), url("../img/lol.png");
   min-height: 100%;
 
 }
@@ -202,6 +237,14 @@ hr {
   padding: 0;
   max-width: 55%;
   font-size: 2rem;
+}
+#home p{
+  font-size: 3rem;
+}
+.main a {
+    color: #75E4FF;
+    padding:0 0.5rem ;
+  
 }
 
 .scroll {
@@ -255,12 +298,6 @@ hr {
     transform: translateY(0);
   }
 }
-
-
-
-#home {}
-
-#rl {}
 
 
 /* Footer */
@@ -318,5 +355,5 @@ footer #c3 {
   float: left;
   width: 100%;
   padding-bottom: .5rem;
-  margin-top: -6rem;
+  margin-top: -3rem;
 }

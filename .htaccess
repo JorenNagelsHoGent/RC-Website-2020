@@ -1,1 +1,10 @@
-php_value auto_prepend_file "./login.php"
+Options +FollowSymLinks -MultiViews
+Options -Indexes
+AcceptPathInfo Off
+RewriteEngine on
+RewriteBase   /
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php

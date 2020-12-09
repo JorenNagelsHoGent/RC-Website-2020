@@ -86,7 +86,7 @@ function session($key, $default = NULL)
 }
 
 ?>
-<?php $thisPage = "Events"; ?>
+<?php $thisPage = "Teams"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,7 +116,7 @@ function session($key, $default = NULL)
         })();
     </script>
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/events.css" rel="stylesheet">
+    <link href="css/teams.css" rel="stylesheet">
     <script src="js/script.js"></script>
 </head>
 
@@ -128,42 +128,71 @@ function session($key, $default = NULL)
     <?php require_once "navbar.php" ?>
 
     <!-- Body -->
-    <div class="news">
-        <div class="newsCard">
-            <img src="img/rc_lol.png">
-            <div class="info">
-                <header>Rocket Core Weekly</header>
-                <div class="description">
-                    Welcome to our weekly Rocket League tournament!
-
-                </div>
-                <div class="date">Monday 16 November 2020</div>
-                <a class="button" href="">Sign up</a>
-            </div>
+    <div class="TeamBG" id="TeamBGESports">
+        <div class="main" id="TeamOverview">
+            <h1 class="Teamheader">ESports</h1>
+            <table class="TeamTable">
+                <tr>
+                    <td><a href="https://twitter.com/blitzleague_"><strong>Blitzleague</strong></a></td>
+                </tr>
+                <tr>
+                    <td>Jariz</td>
+                </tr>
+                <tr>
+                    <td>Kevster098</td>
+                </tr>
+            </table>
         </div>
-        <div class="newsCard">
-            <img src="img/rc_lol.png">
-            <div class="info">
-                <header>Rocket Core Weekly</header>
-                <div class="description">
-                    Welcome to our weekly Rocket League tournament!
+    </div>
 
-                </div>
-                <div class="date">Monday 16 November 2020</div>
-                <a class="button" href="">Sign up</a>
-            </div>
+    <div class="TeamBG" id="TeamBGSaturn">
+        <div class="main">
+            <table class="TeamTable">
+                <tr>
+                    <td><a href="https://twitter.com/blitzleague_"><strong>Blitzleague</strong></a></td>
+                </tr>
+                <tr>
+                    <td>Jariz</td>
+                </tr>
+                <tr>
+                    <td>Kevster098</td>
+                </tr>
+            </table>
+            <h1 class="Teamheader">Saturn</h1>
         </div>
-        <div class="newsCard">
-            <img src="img/rc_lol.png">
-            <div class="info">
-                <header>Rocket Core Weekly</header>
-                <div class="description">
-                    Welcome to our weekly Rocket League tournament!
+    </div>
 
-                </div>
-                <div class="date">Monday 16 November 2020</div>
-                <a class="button" href="">Sign up</a>
-            </div>
+    <div class="TeamBG" id="TeamBGPluto">
+        <div class="main">
+            <h1 class="Teamheader">Pluto</h1>
+            <table class="TeamTable">
+                <tr>
+                    <td><a href="https://twitter.com/blitzleague_"><strong>Blitzleague</strong></a></td>
+                </tr>
+                <tr>
+                    <td>Jariz</td>
+                </tr>
+                <tr>
+                    <td>Kevster098</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="TeamBG" id="TeamBGSaturn">
+        <div class="main">
+            <table class="TeamTable">
+                <tr>
+                    <td><a href="https://twitter.com/blitzleague_"><strong>Blitzleague</strong></a></td>
+                </tr>
+                <tr>
+                    <td>Jariz</td>
+                </tr>
+                <tr>
+                    <td>Kevster098</td>
+                </tr>
+            </table>
+            <h1 class="Teamheader">Saturn</h1>
         </div>
     </div>
 

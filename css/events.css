@@ -4,7 +4,11 @@ body {
 }
 nav {
     background-color: #151618;
-    filter: drop-shadow(0.5rem 0.5rem 3rem black)
+    filter: drop-shadow(0.3rem 0.3rem 3rem black)
+}
+.menu-content {
+    background-color: #151618;
+    color: white;
 }
 .news{
     padding-top: 11rem;
