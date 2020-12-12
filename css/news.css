@@ -3,7 +3,6 @@ body {
     font: black
 }
 nav {
-    background-color: #151618;
     filter: drop-shadow(1rem 1rem 3rem black)
 }
 .menu-content {

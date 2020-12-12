@@ -1,0 +1,63 @@
+body {
+    background-image: url("../img/bg_dark.png");
+}
+
+/* .content a:link,
+.content a:visited,
+.content a:hover {
+    color: black;
+} */
+
+nav {
+    background-color: #242629;
+
+}
+
+.content {
+    color: white;
+    min-height: 100%;
+}
+
+.contact {
+    margin: 30rem 1% 10rem 10%;
+    vertical-align: middle;
+    display: inline-block;
+    width: 35%;
+    font-size: 3rem;
+
+}
+
+.contact a {
+    color: #75E4FF;
+}
+
+
+.socials {
+    text-align: center;
+    vertical-align: middle;
+    margin: 38rem 3% 15rem 1%;
+    display: inline-block;
+    width: 45%;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.socials i {
+    letter-spacing: 0.3rem;
+    font-size: 4rem;
+    padding: 4.2rem 1.4rem;
+}
+
+.socials img {
+    margin-bottom: 0.5rem;
+    vertical-align: middle;
+}
+
+
+footer {
+    background-color: #242629;
+
+}

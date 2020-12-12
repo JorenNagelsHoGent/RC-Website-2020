@@ -1,0 +1,115 @@
+nav {
+    background-color: rgba(0, 0, 0, 0.60);
+}
+
+.BG {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #BG1 {
+    background-image: linear-gradient(to top, transparent, 50% ,black ), url("../img/home.png");
+    min-height: 100%;
+  
+  }
+  
+  #BG2 {
+    background-image: linear-gradient(to top, transparent, 10% ,black ), url("../img/rl.png");
+    min-height: 100%;
+  
+  }
+  
+  #BG3 {
+    background-image: linear-gradient(to top, transparent, 10% ,black ), url("../img/lol.png");
+    min-height: 100%;
+  
+  }
+  
+  /* body */
+  
+  .main {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+  }
+  
+  .main h1 {
+    font-size: 6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+  }
+  
+  .main p {
+    display: block;
+    margin: auto;
+    padding: 0;
+    max-width: 55%;
+    font-size: 2rem;
+  }
+  #home p{
+    font-size: 3rem;
+  }
+  .main a {
+      color: #75E4FF;
+      padding:0 0.5rem ;
+    
+  }
+  
+  .scroll {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .scroll i {
+    margin-left: 0.8rem;
+    vertical-align: middle;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3.6s ease infinite;
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+  
+    5.55556% {
+      transform: translateY(0);
+    }
+  
+    11.11111% {
+      transform: translateY(0);
+    }
+  
+    22.22222% {
+      transform: translateY(15px);
+    }
+  
+    27.77778% {
+      transform: translateY(0);
+    }
+  
+    33.33333% {
+      transform: translateY(15px);
+    }
+  
+    44.44444% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }

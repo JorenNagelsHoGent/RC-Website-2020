@@ -115,9 +115,9 @@ function session($key, $default = NULL)
             document.getElementsByTagName('head')[0].appendChild(css);
         })();
     </script>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/teams.css" rel="stylesheet">
-    <script src="js/script.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/teams.css" rel="stylesheet">
+    <script src="../js/script.js"></script>
 </head>
 
 <body>
@@ -125,7 +125,7 @@ function session($key, $default = NULL)
 
     <!-- Navigation -->
 
-    <?php require_once "navbar.php" ?>
+    <?php require_once "../navbar.php" ?>
 
     <!-- Body -->
     <div class="TeamBG" id="TeamBGESports">
@@ -198,7 +198,7 @@ function session($key, $default = NULL)
 
 
     <!--- footer -->
-    <?php require_once "footer.html" ?>
+    <?php require_once "../footer.html" ?>
 
 </body>
 

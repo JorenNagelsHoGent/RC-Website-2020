@@ -1,5 +1,7 @@
 
-
+nav {
+    background-color: rgba(21, 22, 24, 0.40);
+}
 .TeamBG {
     display: flex;
     align-items: center;

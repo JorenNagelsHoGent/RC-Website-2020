@@ -115,6 +115,7 @@ function session($key, $default = NULL)
 		})();
 	</script>
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/home.css" rel="stylesheet">
 	<script src="js/script.js"></script>
 </head>
 
@@ -134,7 +135,7 @@ function session($key, $default = NULL)
 		</div>
 		<a href="#BG2" class="scroll">
 			Rocket League
-			<i class="fas fa-angle-double -down"></i>
+			<i class="fas fa-angle-double-down"></i>
 		</a>
 	</div>
 
