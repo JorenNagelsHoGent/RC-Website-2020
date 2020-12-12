@@ -1,50 +1,111 @@
+body {
+    text-align: center;
+    background-image: url("../img/bg_dark.png");
+}
 
 nav {
-    background-color: rgba(21, 22, 24, 0.40);
+    background-color: #242629;
 }
-.TeamBG {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 46%;
+
+article {
+    padding-top: 15rem;
+    display: inline-block;
+    width: 45%;
+    font-size: 3rem;
+}
+
+article a {
+    color: #75E4FF !important;
+    padding: 0 0.5rem
+}
+
+article a i {
+    padding-left: 1rem;
+}
+
+.teams {
+    padding-top: 5rem;
+    /* margin-bottom: 20rem; */
+    min-height: 70%;
+}
+
+.collumn {
+    text-align: center;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.collumn h2 {
+    display: block;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin: 3rem 0 0 0;
+}
+
+.collumn i {
+    padding-left: 0.5rem;
+}
+
+.collumn h2 img {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding-bottom: 0.9rem;
+    vertical-align: bottom;
+}
+
+.collumn ul {
+    font-size: 2.2rem;
+    list-style: none;
+    margin: 0 0 3rem 0;
+    padding: 0 0 1rem 0;
+}
+
+.collumn ul li {
+    padding: 1rem 0;
+}
+
+.collumn ul li.cap {
+    font-weight: 600;
+}
+
+.sub a {
+    font-weight: 300;
+    font-style: italic;
+    color: #a8a8a8 !important;
+}
+
+.open {
+    font-weight: 300;
+    font-style: italic;
+    color: #707070 !important;
+}
+
+#esports {
+    margin: 0;
+    display: block !important;
     width: 100%;
 }
 
-.main {
-    display: flex;
-    top: auto;
-    align-items: center;
+#topTeam {
+    margin-top: -5rem;
 }
 
-#TeamBGESports {
-    background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.25) 100%, rgba(0, 212, 255, 1) 100%), url("../img/rc_lol.png");
-    padding-top: 7.9rem;
-    height: 92%;
+@media screen and (max-width: 800px) {
+    .collumn {
+        width: 100%;
+    }
+
+    #topTeam {
+        margin-top: 0;
+    }
+
 }
 
-#TeamBGPluto {
-    background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.25) 100%, rgba(0, 212, 255, 1) 100%), url("../img/pluto.jpg");
-}
+footer {
+    background-color: #242629;
 
-#TeamBGSaturn {
-    background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.25) 100%, rgba(0, 212, 255, 1) 100%), url("../img/saturn.jpg");
-}
-
-.Teamheader {
-    padding: 0;
-    width: 50%;
-}
-
-.TeamTable {
-    width: 50%;
-    flex-grow: 1;
-    text-align: center;
-}
-
-.TeamTable td {
-    font-size: 4rem;
-    padding: 1rem;
 }
