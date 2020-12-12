@@ -12,7 +12,9 @@ nav {
     background-color: #242629;
 
 }
-
+.teams-menu, .menu-content {
+    background-color: #242629;
+}
 .content {
     color: white;
     min-height: 100%;

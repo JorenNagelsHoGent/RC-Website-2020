@@ -28,9 +28,14 @@ a:hover {
   color: white;
 }
 
+nav a:hover {
+  animation: fadeIn ease 0.4s;
+  text-decoration: underline !important;
+  text-underline-offset: 10px;
+
+}
 
 /*top navigation */
-
 nav {
   height: 80px;
   background-color: #151618;
@@ -105,7 +110,8 @@ nav ul {
   font-size: 1rem !important;
   top: 80px;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.30);
+  background-color: #151618;
+
   width: 100%;
   z-index: -10;
   text-align: center;

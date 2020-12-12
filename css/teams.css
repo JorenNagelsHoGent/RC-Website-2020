@@ -7,6 +7,10 @@ nav {
     background-color: #242629;
 }
 
+.teams-menu, .menu-content {
+    background-color: #242629;
+}
+
 article {
     padding-top: 15rem;
     display: inline-block;

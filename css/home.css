@@ -1,7 +1,20 @@
 nav {
     background-color: rgba(0, 0, 0, 0.60);
 }
+.teams-menus {
+  background-color: rgba(0, 0, 0, 0.30);
+}
 
+footer {
+  background-color: rgba(0, 0, 0, 0.30);
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, transparent, 20% ,black ), url("../img/lol.png");
+
+}
 .BG {
     position: relative;
     background-attachment: fixed;
