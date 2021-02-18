@@ -2,37 +2,39 @@ body {
     background-color: whitesmoke;
     color: black
 }
+
 nav {
     background-color: #151618;
     filter: drop-shadow(0.3rem 0.3rem 3rem black)
 }
+
 .menu-content {
     background-color: #151618;
     color: white;
 }
-.news{
-    padding-top: 11rem;
-    padding-bottom: 10rem;
 
-}
+
 .newsCard {
     display: flex;
     color: black;
     font-size: 1.7rem;
     width: 80%;
     height: 20rem;
-    margin: 3% 10%;
+    margin: 5% 14%;
     /* display: inline-block; */
     filter: drop-shadow(1.5rem 1.5rem 3rem black)
 }
+
 /* .newsCard:hover {
     width: 29%;
     margin: 2% 2% 1.5% 2%;
     font-size: 1.65rem !important;
 } */
-.newsCard .info{
+.newsCard .info {
+    text-align: left;
+    position: relative;
     min-width: 40rem;
-    padding: 2rem;
+    padding: 3rem;
     flex-grow: 1;
     color: black;
     background-color: whitesmoke;
@@ -40,27 +42,41 @@ nav {
     border-left: 5px solid rgb(177, 81, 25);
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
+    
 }
-.newsCard img{
+
+.newsCard img {
     margin: 0;
     height: 100%;
     padding: 0;
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
 }
+
 .newsCard header {
     font-size: 3.5rem;
     font-weight: 500;
+    width: 98%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
 }
+
 .newsCard .description {
     color: black;
 }
+
 .newsCard .date {
-    margin-top: 5rem;
+    position: absolute;
+    bottom: 3rem;
     float: left;
 }
+
 .newsCard .button {
-    margin-top: 4rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
     background-color: #151618;
     color: white;
     padding: 1rem 2rem;
@@ -69,3 +85,66 @@ nav {
 }
 
 
+@media screen and (max-width: 1250px) {
+
+    .newsCard {
+        height: auto;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15rem;
+
+    }
+
+
+    .newsCard img {
+        height: auto;
+        width: 100%;
+        border-top-right-radius: 1.5rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .newsCard .info {
+        padding: 3%;
+        position: absolute;
+        top: 100%;
+        width: 94%;
+        margin-top: -0.7rem;
+        border-top: 5px solid rgb(177, 81, 25);
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        min-width: 0rem;
+
+
+        margin-left: 0;
+        border-left: 0px solid rgb(177, 81, 25);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 1.5rem;
+    }
+
+
+    .newsCard .description {
+        display: none;
+    }
+
+    .newsCard .date {
+        display: none;
+    }
+
+    .newsCard .button {
+        font-size: 80%;
+        bottom: 25%;
+        right: 2%;
+        
+    }
+
+    .newsCard header {
+        width: 74%;
+        text-align: left;
+        font-size: 3rem;
+        font-weight: 400;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}

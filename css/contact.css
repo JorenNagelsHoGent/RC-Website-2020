@@ -12,16 +12,21 @@ nav {
     background-color: #242629;
 
 }
-.teams-menu, .menu-content {
+.navbar.responsive {
     background-color: #242629;
 }
+.teams-menu,
+.menu-content {
+    background-color: #242629;
+}
+
 .content {
     color: white;
     min-height: 100%;
 }
 
 .contact {
-    margin: 30rem 1% 10rem 10%;
+    margin: 32rem 1% 10rem 8%;
     vertical-align: middle;
     display: inline-block;
     width: 35%;
@@ -46,20 +51,46 @@ nav {
     font-size: 5rem;
     font-weight: 400;
 }
-
-.socials i {
+.socials .rc {
+    display: block;
+    margin-bottom: 3rem;
+}
+.socials img {
+    width: 8rem;
+}
+.socials a {
     letter-spacing: 0.3rem;
     font-size: 4rem;
     padding: 4.2rem 1.4rem;
 }
 
 .socials img {
-    margin-bottom: 0.5rem;
+    margin-left: -1.5rem;
+    
     vertical-align: middle;
 }
 
 
 footer {
     background-color: #242629;
+
+}
+
+@media screen and (max-width: 1270px) {
+    .content {
+        padding-top: 20rem;
+        text-align: center;
+    }
+    .contact {
+        font-size: 2.5rem;
+        margin: 10rem 0;
+        width: 100%;
+    }
+
+    .socials{
+        /* font-size: 4rem; */
+        margin: 10rem 0;
+        width: 100%;
+    }
 
 }

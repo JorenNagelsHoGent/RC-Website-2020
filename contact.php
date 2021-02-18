@@ -14,75 +14,76 @@ $apiURLBase = 'https://discord.com/api/users/@me';
 
 session_start();
 
-
 // When Discord redirects the user back here, there will be a "code" and "state" parameter in the query string
 if (get('code')) {
 
-    // Exchange the auth code for a token
-    $token = apiRequest($tokenURL, array(
-        "grant_type" => "authorization_code",
-        'client_id' => OAUTH2_CLIENT_ID,
-        'client_secret' => OAUTH2_CLIENT_SECRET,
-        'redirect_uri' => 'http://localhost:3000/index.php',
-        'code' => get('code')
-    ));
-    $logout_token = $token->access_token;
-    $_SESSION['access_token'] = $token->access_token;
+	// Exchange the auth code for a token
+	
+	$token = apiRequest($tokenURL, array(
+		"grant_type" => "authorization_code",
+		'client_id' => OAUTH2_CLIENT_ID,
+		'client_secret' => OAUTH2_CLIENT_SECRET,
+		'redirect_uri' => 'https://rocketcorerl.com',
+		'code' => get('code')
+	));
+	$logout_token = $token->access_token;
+	$_SESSION['access_token'] = $token->access_token;
 
 
-    header('Location: ' . $_SERVER['PHP_SELF']);
+	header('Location: ' . $_SERVER['PHP_SELF']);
 }
 
 if (session('access_token')) {
-    $user = apiRequest($apiURLBase, array());
-    $avatarURL = "https://cdn.discordapp.com/avatars/" . $user->id . "/" . $user->avatar . ".png";
+	$user = apiRequest($apiURLBase, array());
+	$avatarURL = "https://cdn.discordapp.com/avatars/" . $user->id . "/" . $user->avatar . ".png";
 }
 if (get('action') == 'login') {
-    header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Findex.php&response_type=code&scope=identify%20email');
+	header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=https%3A%2F%2Frocketcorerl.com&response_type=code&scope=identify%20email');
 }
 
 if (get('action') == 'logout') {
-    // This must to logout you, but it didn't worked(
-    $params = array(
-        'access_token' => session('access_token')
-    );
+	// This must to logout you, but it didn't worked(
+	$params = array(
+		'access_token' => session('access_token')
+	);
 
-    // Redirect the user to Discord's revoke page
-    header('content_type:x-www-form-urlencoded', 'Location: https://discordapp.com/api/oauth2/token/revoke' . '?' . http_build_query($params));
-    $_SESSION = array();
+	// Redirect the user to Discord's revoke page
+	header('content_type:x-www-form-urlencoded', 'Location: https://discordapp.com/api/oauth2/token/revoke' . '?' . http_build_query($params));
+	$_SESSION = array();
+	header('Location: https://rocketcorerl.com');
 }
 
 function apiRequest($url, $post = FALSE, $headers = array())
 {
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+	$ch = curl_init($url);
+	curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 
-    $response = curl_exec($ch);
+	$response = curl_exec($ch);
 
 
-    if ($post)
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
+	if ($post)
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
 
-    $headers[] = 'Accept: application/json';
+	$headers[] = 'Accept: application/json';
 
-    if (session('access_token'))
-        $headers[] = 'Authorization: Bearer ' . session('access_token');
+	if (session('access_token'))
+		$headers[] = 'Authorization: Bearer ' . session('access_token');
 
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
-    $response = curl_exec($ch);
-    return json_decode($response);
+	$response = curl_exec($ch);
+	return json_decode($response);
 }
 
 function get($key, $default = NULL)
 {
-    return array_key_exists($key, $_GET) ? $_GET[$key] : $default;
+	return array_key_exists($key, $_GET) ? $_GET[$key] : $default;
 }
 
 function session($key, $default = NULL)
 {
-    return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
+	return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
 }
 
 ?>
@@ -102,8 +103,8 @@ function session($key, $default = NULL)
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/black.png" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>Rocket Core</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <title>Rocket Core Contact</title>
     <script type="text/javascript">
         (function() {
             var css = document.createElement('link');
@@ -136,8 +137,10 @@ function session($key, $default = NULL)
 
 
         <div class="socials">
-            <img src="img/logo.png" height="80" width="80">
-            <span id="RCFooter">Rocket Core</span><BR>
+            <div class="rc"> 
+            <img src="img/logo.png">
+            <span id="RCFooter">Rocket Core</span>
+            </div>
             <a href="https://www.twitch.tv/rocket_core/" target="_blank"><i class="fab fa-twitch"></i></a>
             <a href="http://discord.rocketcorerl.com" target="_blank"><i class="fab fa-discord"></i></a>
             <a href="https://twitter.com/rc_rocketcore" target="_blank"><i class="fab fa-twitter"></i></a>

@@ -1,8 +1,9 @@
 nav {
-    background-color: rgba(0, 0, 0, 0.60);
+  background-color: rgba(0, 0, 0, 0.60);
 }
-.teams-menus {
-  background-color: rgba(0, 0, 0, 0.30);
+
+.teams-menu {
+  background-color: rgba(0, 0, 0, 0.60);
 }
 
 footer {
@@ -12,117 +13,126 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom, transparent, 20% ,black ), url("../img/lol.png");
+  background-image: linear-gradient(to bottom, transparent, 20%, black), url("../img/lol.png");
 
 }
+
 .BG {
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#BG1 {
+  background-image: linear-gradient(to top, transparent, 50%, black), url("../img/home.png");
+  min-height: 100%;
+
+}
+
+#BG2 {
+  background-image: linear-gradient(to top, transparent, 10%, black), url("../img/rl.png");
+  min-height: 100%;
+
+}
+
+#BG3 {
+  background-image: linear-gradient(to top, transparent, 10%, black), url("../img/lol.png");
+  min-height: 100%;
+
+}
+
+/* body */
+
+.main {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.main h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+}
+
+.main p {
+  display: block;
+  margin: auto;
+  padding: 0;
+  max-width: 55%;
+  font-size: 2.2rem;
+}
+#home {
+  top: 30%;
+}
+#home p {
+  font-size: 3rem;
+}
+
+.main a {
+  color: #75E4FF;
+  padding: 0 0.5rem;
+
+}
+
+.scroll {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.scroll i {
+  margin-left: 0.8rem;
+  vertical-align: middle;
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+  animation: bounce 3.6s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
   }
-  
-  #BG1 {
-    background-image: linear-gradient(to top, transparent, 50% ,black ), url("../img/home.png");
-    min-height: 100%;
-  
+
+  5.55556% {
+    transform: translateY(0);
   }
-  
-  #BG2 {
-    background-image: linear-gradient(to top, transparent, 10% ,black ), url("../img/rl.png");
-    min-height: 100%;
-  
+
+  11.11111% {
+    transform: translateY(0);
   }
-  
-  #BG3 {
-    background-image: linear-gradient(to top, transparent, 10% ,black ), url("../img/lol.png");
-    min-height: 100%;
-  
+
+  22.22222% {
+    transform: translateY(15px);
   }
-  
-  /* body */
-  
-  .main {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    text-align: center;
-    width: 100%;
-    color: white;
+
+  27.77778% {
+    transform: translateY(0);
   }
-  
-  .main h1 {
-    font-size: 6rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2rem;
+
+  33.33333% {
+    transform: translateY(15px);
   }
-  
-  .main p {
-    display: block;
-    margin: auto;
-    padding: 0;
-    max-width: 55%;
-    font-size: 2rem;
+
+  44.44444% {
+    transform: translateY(0);
   }
-  #home p{
-    font-size: 3rem;
+
+  100% {
+    transform: translateY(0);
   }
-  .main a {
-      color: #75E4FF;
-      padding:0 0.5rem ;
-    
-  }
-  
-  .scroll {
-    font-size: 2.5rem;
-    position: absolute;
-    top: 85%;
-    left: 0;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .scroll i {
-    margin-left: 0.8rem;
-    vertical-align: middle;
-    animation-iteration-count: infinite;
-    animation-duration: 1.5s;
-    animation: bounce 3.6s ease infinite;
-    transform-origin: 50% 50%;
-  }
-  
-  @keyframes bounce {
-    0% {
-      transform: translateY(0);
-    }
-  
-    5.55556% {
-      transform: translateY(0);
-    }
-  
-    11.11111% {
-      transform: translateY(0);
-    }
-  
-    22.22222% {
-      transform: translateY(15px);
-    }
-  
-    27.77778% {
-      transform: translateY(0);
-    }
-  
-    33.33333% {
-      transform: translateY(15px);
-    }
-  
-    44.44444% {
-      transform: translateY(0);
-    }
-  
-    100% {
-      transform: translateY(0);
-    }
-  }
+}
+
+.navbar.responsive {
+  background-color: rgba(0, 0, 0, 0.60);
+}

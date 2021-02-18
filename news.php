@@ -14,16 +14,16 @@ $apiURLBase = 'https://discord.com/api/users/@me';
 
 session_start();
 
-
 // When Discord redirects the user back here, there will be a "code" and "state" parameter in the query string
 if (get('code')) {
 
 	// Exchange the auth code for a token
+	
 	$token = apiRequest($tokenURL, array(
 		"grant_type" => "authorization_code",
 		'client_id' => OAUTH2_CLIENT_ID,
 		'client_secret' => OAUTH2_CLIENT_SECRET,
-		'redirect_uri' => 'http://localhost:3000/index.php',
+		'redirect_uri' => 'https://rocketcorerl.com',
 		'code' => get('code')
 	));
 	$logout_token = $token->access_token;
@@ -38,7 +38,7 @@ if (session('access_token')) {
 	$avatarURL = "https://cdn.discordapp.com/avatars/" . $user->id . "/" . $user->avatar . ".png";
 }
 if (get('action') == 'login') {
-	header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Findex.php&response_type=code&scope=identify%20email');
+	header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=https%3A%2F%2Frocketcorerl.com&response_type=code&scope=identify%20email');
 }
 
 if (get('action') == 'logout') {
@@ -48,8 +48,9 @@ if (get('action') == 'logout') {
 	);
 
 	// Redirect the user to Discord's revoke page
-	header('content_type:x-www-form-urlencoded','Location: https://discordapp.com/api/oauth2/token/revoke' . '?' . http_build_query($params));
+	header('content_type:x-www-form-urlencoded', 'Location: https://discordapp.com/api/oauth2/token/revoke' . '?' . http_build_query($params));
 	$_SESSION = array();
+	header('Location: https://rocketcorerl.com');
 }
 
 function apiRequest($url, $post = FALSE, $headers = array())
@@ -97,73 +98,88 @@ function session($key, $default = NULL)
 	<meta property="og:url" content="https://rocketcorerl.com" />
 	<meta property="og:image" content="https://www.rocketcorerl.com/img/logo_o.png" />
 	<meta name="description" content="Rocket Core official website">
-	<meta name="keywords" content="Rocket Core,Rocket,Core,Rocket League,League,tournament,tournaments,eu,esports,RC,RCEsports,rocket core esports,rcpluto,rcsaturn,rcjupiter,rcneptune,galactic,series">
+	<meta name="keywords" content="Rocket Core,Rocket,Core,Rocket League,League,tournament,tournaments,eu,esports,RC,RCEsports,rocket core esports,rcpluto,rcsaturn,rcjupiter,rcneptune,galactic,series,rocketcore,rcweekly,poisonpit">
 	<meta name="author" content="Joren Nagels">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="img/black.png" />
-	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-	<title>Rocket Core</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+	<title>Rocket Core News</title>
 	<script type="text/javascript">
 		(function() {
 			var css = document.createElement('link');
-			css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+			css.href = 'https://use.fontawesome.com/releases/v5.15.1/css/all.css';
 			css.rel = 'stylesheet';
 			css.type = 'text/css';
 			document.getElementsByTagName('head')[0].appendChild(css);
 		})();
 	</script>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/news.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/news.css" rel="stylesheet">
 	<script src="js/script.js"></script>
 </head>
 
 <body>
 
-	
+
 	<!-- Navigation -->
 
-    <?php require_once "navbar.php" ?>
+	<?php require_once "navbar.php" ?>
 
 	<!-- Body -->
-	<div class="news">
-        <div class="newsCard">
-            <a href="news/rc-joins-lol.html">
-                <img src="img/rc_lol.png">
-                <header>RC joins League of Legends!</header>
-            </a>
-        </div>
-        <div class="newsCard">
-            <a href="news/rc-weekly.html">
-                <img src="img/rc_lol.png">
-                <header>RC Weekly!</header>
-            </a>
-        </div>
-        <div class="newsCard">
-            <a href="">
-                <img src="img/rc_lol.png">
-                <header>RC joins League of Legends!</header>
-            </a>
-        </div>
-        <div class="newsCard">
-            <a href="">
-                <img src="img/rc_lol.png">
-                <header>RC joins League of Legends!</header>
-            </a>
-        </div>
-        <div class="newsCard">
-            <a href="">
-                <img src="img/rc_lol.png">
-                <header>RC joins League of Legends!</header>
-            </a>
-        </div>
-        <div class="newsCard">
-            <a href="">
-                <img src="img/rc_lol.png">
-                <header>RC joins League of Legends!</header>
-            </a>
-        </div>
-    </div>
+
+	<div class="content">
+
+		<!-- Template START-->
+		<!-- 
+			<div class="newsCard">
+				<a href="news/">
+					<img src="img/posters/">
+					<header></header>
+				</a>
+			</div>
+		 -->
+		<!-- Template END -->
+
+		<div class="newsCard">
+				<a href="news/es2-teams.php">
+					<img src="img/posters/es2_teams.png">
+					<header>The Elemental Series 2 - Invited Teams!</header>
+				</a>
+			</div><div class="newsCard">
+				<a href="news/es2.php">
+					<img src="img/posters/es2.png">
+					<header>The Elemental Series 2!</header>
+				</a>
+			</div>
+		<div class="newsCard">
+			<a href="news/poisonpit.php">
+				<img src="img/posters/poisonpit.png">
+				<header>The Poison Pit!</header>
+			</a>
+		</div>
+		<div class="newsCard">
+			<a href="news/rc-weekly.php">
+				<img src="img/posters/RCWeekly_antlion.png">
+				<header>Rocket Core Weekly!</header>
+			</a>
+		</div>
+		<div class="newsCard">
+			<a href="news/elemental-series.php">
+				<img src="img/posters/es.png">
+				<header>The Elemental Series!</header>
+			</a>
+		</div>
+		<div class="newsCard">
+			<a href="news/rc-joins-lol.php">
+				<img src="img/posters/rc_lol.png">
+				<header>RC joins League of Legends!</header>
+			</a>
+		</div>
+
+
+
+	</div>
 
 
 	<!--- footer -->

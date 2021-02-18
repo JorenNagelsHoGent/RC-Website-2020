@@ -14,16 +14,16 @@ $apiURLBase = 'https://discord.com/api/users/@me';
 
 session_start();
 
-
 // When Discord redirects the user back here, there will be a "code" and "state" parameter in the query string
 if (get('code')) {
 
     // Exchange the auth code for a token
+
     $token = apiRequest($tokenURL, array(
         "grant_type" => "authorization_code",
         'client_id' => OAUTH2_CLIENT_ID,
         'client_secret' => OAUTH2_CLIENT_SECRET,
-        'redirect_uri' => 'http://localhost:3000/index.php',
+        'redirect_uri' => 'https://rocketcorerl.com',
         'code' => get('code')
     ));
     $logout_token = $token->access_token;
@@ -38,7 +38,7 @@ if (session('access_token')) {
     $avatarURL = "https://cdn.discordapp.com/avatars/" . $user->id . "/" . $user->avatar . ".png";
 }
 if (get('action') == 'login') {
-    header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Findex.php&response_type=code&scope=identify%20email');
+    header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=https%3A%2F%2Frocketcorerl.com&response_type=code&scope=identify%20email');
 }
 
 if (get('action') == 'logout') {
@@ -50,6 +50,7 @@ if (get('action') == 'logout') {
     // Redirect the user to Discord's revoke page
     header('content_type:x-www-form-urlencoded', 'Location: https://discordapp.com/api/oauth2/token/revoke' . '?' . http_build_query($params));
     $_SESSION = array();
+    header('Location: https://rocketcorerl.com');
 }
 
 function apiRequest($url, $post = FALSE, $headers = array())
@@ -102,12 +103,12 @@ function session($key, $default = NULL)
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/black.png" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>Rocket Core</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <title>Rocket Core Esports</title>
     <script type="text/javascript">
         (function() {
             var css = document.createElement('link');
-            css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+            css.href = 'https://use.fontawesome.com/releases/v5.15.1/css/all.css';
             css.rel = 'stylesheet';
             css.type = 'text/css';
             document.getElementsByTagName('head')[0].appendChild(css);
@@ -125,9 +126,11 @@ function session($key, $default = NULL)
 
     <?php require_once "../navbar.php" ?>
 
-        <article>
-            Follow our Official Rocket Core Esports Twitter <a href="https://twitter.com/RocketCore_E" target="_blank">@RocketCore_E <i class="fab fa-twitter"></i></a>
-        </article>
+    <article>
+        Follow our Official Rocket Core Esports Twitter <a href="https://twitter.com/RocketCore_E" target="_blank">@RocketCore_E <i class="fab fa-twitter"></i></a>
+        <br><br>
+        Click <a href="https://docs.google.com/forms/d/e/1FAIpQLScqTdWdB6TBqq3rH5gPvFMw7jJRP_su4kHbFtDurbgI0WlsSw/viewform" target="_blank">here </a>if you want apply!
+    </article>
     <!-- Body -->
     <div class="teams">
         <div class="collumn" id="esports">
@@ -135,9 +138,10 @@ function session($key, $default = NULL)
                 <img src="../img/logo.png">
             </h2>
             <ul>
+                <li class="cap"><a href="https://twitter.com/Mazzorl" target="_blank">Mazzo <i class="fab fa-twitter"></i></a></li>
                 <li class="open">open</li>
                 <li class="open">open</li>
-                <li class="open">open</li>
+                <li class="sub"><a href="https://twitter.com/TRAIL3Y_RL" target="_blank">TRAIL3Y <i class="fab fa-twitter"></i></a></li>
             </ul>
         </div>
         <div class="collumn" id="topTeam">
@@ -155,8 +159,6 @@ function session($key, $default = NULL)
                 <img src="../img/venus_emoji.png">
             </h2>
             <ul>
-                <li class="cap"><a href="https://twitter.com/tvylics" target="_blank">Tvylics <i class="fab fa-twitter"></i></a></li>
-                <li class="open">open</li>
                 <li class="open">open</li>
             </ul>
         </div>
@@ -190,8 +192,7 @@ function session($key, $default = NULL)
             <ul>
                 <li class="cap"><a href="https://twitter.com/BlitzLeague_" target="_blank">BlitzLeague <i class="fab fa-twitter"></i></a></li>
                 <li><a href="https://twitter.com/Jariz_RL" target="_blank">Jariz <i class="fab fa-twitter" target="_blank"></i></a></li>
-                <li><a href="https://twitter.com/Kevster098" target="_blank">Kevster098 <i class="fab fa-twitter"></i></a></li>
-                <li class="sub"><a href="https://twitter.com/KageruRL" target="_blank">Kageru <i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://twitter.com/TheBestPikachu" target="_blank">Cookies. <i class="fab fa-twitter"></i></a></li>
             </ul>
         </div>
     </div>
