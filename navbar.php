@@ -1,5 +1,5 @@
 <nav>
-	<a class="logo" href="./"><img src="/img/logo.png" width=50px></a>
+	<a class="logo" href="../index.php"><img src="/img/logo.png" width=50px></a>
 	<div class="whitespace"></div>
 	<ul class="navbar" id="navbarID">
 		<li><a <?php if ($thisPage == "Home")

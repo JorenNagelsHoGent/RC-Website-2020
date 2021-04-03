@@ -23,7 +23,7 @@ if (get('code')) {
 		"grant_type" => "authorization_code",
 		'client_id' => OAUTH2_CLIENT_ID,
 		'client_secret' => OAUTH2_CLIENT_SECRET,
-		'redirect_uri' => 'https://rocketcorerl.com',
+		'redirect_uri' => 'https://rocketcore.gg',
 		'code' => get('code')
 	));
 	$logout_token = $token->access_token;
@@ -38,7 +38,7 @@ if (session('access_token')) {
 	$avatarURL = "https://cdn.discordapp.com/avatars/" . $user->id . "/" . $user->avatar . ".png";
 }
 if (get('action') == 'login') {
-	header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=https%3A%2F%2Frocketcorerl.com&response_type=code&scope=identify%20email');
+	header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=https%3A%2F%2Frocketcore.gg&response_type=code&scope=identify%20email');
 }
 
 if (get('action') == 'logout') {
@@ -50,7 +50,7 @@ if (get('action') == 'logout') {
 	// Redirect the user to Discord's revoke page
 	header('content_type:x-www-form-urlencoded', 'Location: https://discordapp.com/api/oauth2/token/revoke' . '?' . http_build_query($params));
 	$_SESSION = array();
-	header('Location: https://rocketcorerl.com');
+	header('Location: https://rocketcore.gg');
 }
 
 function apiRequest($url, $post = FALSE, $headers = array())
@@ -95,10 +95,10 @@ function session($key, $default = NULL)
     <meta property="og:type" content="website">
     <meta property="og:title" content="Rocket Core" />
     <meta property="og:description" content="Rocket Core is a Rocket League Tournament and Events Organisation that fosters an enjoyable environment for all it's staff, members and everyone involved. Our aim is to run successful and enjoyable events for the community and have fun doing so!" />
-    <meta property="og:url" content="https://rocketcorerl.com" />
-    <meta property="og:image" content="https://www.rocketcorerl.com/img/logo_o.png" />
+    <meta property="og:url" content="https://rocketcore.gg" />
+    <meta property="og:image" content="https://www.rocketcore.gg/img/logo.png" />
     <meta name="description" content="Rocket Core official website">
-    <meta name="keywords" content="Rocket Core,Rocket,Core,Rocket League,League,tournament,tournaments,eu,esports,RC,RCEsports,rocket core esports,rcpluto,rcsaturn,rcjupiter,rcneptune,galactic,series">
+    <meta name="keywords" content="Rocket Core,Rocket,Core,Rocket Core GG,rocketcoregg,rocketcore.gg,Rocket League,League,tournament,tournaments,eu,esports,RC,RCEsports,rocket core esports,rcpluto,rcsaturn,rcjupiter,rcneptune,galactic,series">
     <meta name="author" content="Joren Nagels">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -131,7 +131,7 @@ function session($key, $default = NULL)
         <div class="contact">
             <div class="email">
                 For business inquiries email us at<br>
-                <a href="mailto:contact@rocketcorerl.com" target="_blank">contact@rocketcorerl.com</a>
+                <a href="mailto:contact@rocketcore.gg" target="_blank">contact@rocketcore.gg</a>
             </div>
         </div>
 
@@ -142,10 +142,11 @@ function session($key, $default = NULL)
             <span id="RCFooter">Rocket Core</span>
             </div>
             <a href="https://www.twitch.tv/rocket_core/" target="_blank"><i class="fab fa-twitch"></i></a>
-            <a href="http://discord.rocketcorerl.com" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://twitter.com/rc_rocketcore" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/rocket_core" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com/RocketCore" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="http://discord.rocketcore.gg" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://twitter.com/rocketcoregg" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/rocketcoregg" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/rocketcoregg" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://tiktok.com/@rocketcoregg" target="_blank"><i class="fab fa-tiktok"></i></a>
             <a href="https://www.youtube.com/channel/UCI_eLjh_rFn0f4mL8HCztww" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
     </div>

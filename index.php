@@ -23,7 +23,7 @@ if (get('code')) {
 		"grant_type" => "authorization_code",
 		'client_id' => OAUTH2_CLIENT_ID,
 		'client_secret' => OAUTH2_CLIENT_SECRET,
-		'redirect_uri' => 'https://rocketcorerl.com',
+		'redirect_uri' => 'https://rocketcore.gg',
 		'code' => get('code')
 	));
 	$logout_token = $token->access_token;
@@ -38,7 +38,7 @@ if (session('access_token')) {
 	$avatarURL = "https://cdn.discordapp.com/avatars/" . $user->id . "/" . $user->avatar . ".png";
 }
 if (get('action') == 'login') {
-	header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=https%3A%2F%2Frocketcorerl.com&response_type=code&scope=identify%20email');
+	header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=https%3A%2F%2Frocketcore.gg&response_type=code&scope=identify%20email');
 }
 
 if (get('action') == 'logout') {
@@ -50,7 +50,7 @@ if (get('action') == 'logout') {
 	// Redirect the user to Discord's revoke page
 	header('content_type:x-www-form-urlencoded', 'Location: https://discordapp.com/api/oauth2/token/revoke' . '?' . http_build_query($params));
 	$_SESSION = array();
-	header('Location: https://rocketcorerl.com');
+	header('Location: https://rocketcore.gg');
 }
 
 function apiRequest($url, $post = FALSE, $headers = array())
@@ -96,8 +96,8 @@ function session($key, $default = NULL)
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Rocket Core" />
 	<meta property="og:description" content="Rocket Core is a Rocket League Tournament and Events Organisation that fosters an enjoyable environment for all it's staff, members and everyone involved. Our aim is to run successful and enjoyable events for the community and have fun doing so!" />
-	<meta property="og:url" content="https://rocketcorerl.com" />
-	<meta property="og:image" content="https://www.rocketcorerl.com/img/logo_o.png" />
+	<meta property="og:url" content="https://rocketcore.gg" />
+	<meta property="og:image" content="https://www.rocketcore.gg/img/logo.png" />
 	<meta name="description" content="Rocket Core is a Rocket League Tournament and Events Organisation that fosters an enjoyable environment for all it's staff, members and everyone involved. Our aim is to run successful and enjoyable events for the community and have fun doing so!">
 	<meta name="keywords" content="Rocket Core,Rocket,Core,Rocket League,League,tournament,tournaments,eu,esports,RC,RCEsports,rocket core esports,rcpluto,rcsaturn,rcjupiter,rcneptune,galactic,series">
 	<meta name="author" content="Joren Nagels">

@@ -165,7 +165,7 @@ function session($key, $default = NULL)
 			<li>Pool 2 - 05/03/2021 - 6pm GMT</li>
 			<li>Pool 3 - 06/03/2021 - 2pm GMT</li>
 			<li>Pool 4 - 06/03/2021 - 6pm GMT</li>
-			<li>Playoffs- 07/03/2021 - 6pm GMT</li>
+			<li>Playoffs- 07/03/2021 - 12pm GMT</li>
 			</ul>
 			</p>
 			<br><br><br><br>
