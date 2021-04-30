@@ -31,8 +31,8 @@ article a i {
 
 .teams {
     padding-top: 5rem;
-    /* margin-bottom: 20rem; */
-    min-height: 70%;
+    margin-bottom: 5rem;
+    min-height: 100%;
 }
 
 .collumn {
@@ -114,4 +114,49 @@ article a i {
 footer {
     background-color: #242629;
 
+}
+
+textarea {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto;
+    border: solid 1px gray;
+    border-radius: 2rem;
+    background-color: #242629;
+    color: white;
+    resize: none;
+    padding: 0.5rem 0;
+}
+
+.socialTextArea {
+   width: 35rem;
+}
+.buttons {
+    display: block;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.saveButton{
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    border: solid 0 white;
+    background-color: white;
+    color: black;
+    margin-left: 2rem;
+}
+.saveButton:hover {
+    cursor: pointer;
+}
+
+ .editButton {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: white;
+    color: black !important;
+    font-weight: 500;
 }

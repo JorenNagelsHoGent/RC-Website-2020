@@ -1,9 +1,9 @@
 nav {
-  background-color: rgba(0, 0, 0, 0.60);
+  background-color: rgba(0, 0, 0, 0.90);
 }
 
 .teams-menu {
-  background-color: rgba(0, 0, 0, 0.60);
+  background-color: rgba(0, 0, 0, 0.90);
 }
 
 footer {
@@ -13,7 +13,7 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom, transparent, 20%, black), url("../img/lol.png");
+  background-image: linear-gradient(to bottom, transparent, 10%, black), url("../img/lol.png");
 
 }
 
@@ -26,7 +26,7 @@ footer {
 }
 
 #BG1 {
-  background-image: linear-gradient(to top, transparent, 50%, black), url("../img/home.png");
+  background-image: linear-gradient(to top, transparent, 10%, black), url("../img/home.png");
   min-height: 100%;
 
 }

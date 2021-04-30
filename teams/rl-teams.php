@@ -11,6 +11,8 @@ define('OAUTH2_CLIENT_SECRET', 'fHz8V1gGLg7AqotaTV4UwRyFO05UOpfH');
 $authorizeURL = 'https://discord.com/api/oauth2/authorize';
 $tokenURL = 'https://discord.com/api/oauth2/token';
 $apiURLBase = 'https://discord.com/api/users/@me';
+$id = "";
+$isEdit = false;
 
 session_start();
 
@@ -36,6 +38,7 @@ if (get('code')) {
 if (session('access_token')) {
     $user = apiRequest($apiURLBase, array());
     $avatarURL = "https://cdn.discordapp.com/avatars/" . $user->id . "/" . $user->avatar . ".png";
+    $id = $user->id;
 }
 if (get('action') == 'login') {
     header('Location: https://discord.com/api/oauth2/authorize?client_id=693302768340959333&redirect_uri=https%3A%2F%2Frocketcore.gg&response_type=code&scope=identify%20email');
@@ -52,8 +55,14 @@ if (get('action') == 'logout') {
     $_SESSION = array();
     header('Location: https://rocketcore.gg');
 }
-
-function apiRequest($url, $post = FALSE, $headers = array())
+if (get('action') == 'edit') {
+    $isEdit = true;
+}
+if (get('action') == 'cancel') {
+    $isEdit = false;
+    header('Location: https://rocketcore.gg/teams/rl-teams.php');
+}
+function apiRequest($url, $post, $headers = array())
 {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
@@ -87,7 +96,13 @@ function session($key, $default = NULL)
 }
 
 ?>
-<?php $thisPage = "Teams"; ?>
+<?php $thisPage = "Teams";
+
+$json = json_decode(file_get_contents("rl-teams.json"), TRUE);
+
+$isAdmin = ($id == 163983231228706817 || $id == 286568795815018508 || $id == 225271321922109440);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,9 +117,9 @@ function session($key, $default = NULL)
     <meta name="author" content="Joren Nagels">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="img/black.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/black.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <title>Rocket Core Esports</title>
+    <title>RC Rocket League</title>
     <script type="text/javascript">
         (function() {
             var css = document.createElement('link');
@@ -130,85 +145,150 @@ function session($key, $default = NULL)
         Follow our Official Rocket Core Esports Twitter <a href="https://twitter.com/RocketCore_GG" target="_blank">@RocketCore_GG <i class="fab fa-twitter"></i></a>
         <br><br>
         Click <a href="https://docs.google.com/forms/d/e/1FAIpQLScqTdWdB6TBqq3rH5gPvFMw7jJRP_su4kHbFtDurbgI0WlsSw/viewform" target="_blank">here </a>if you want apply!
+
+
     </article>
+
     <!-- Body -->
     <div class="teams">
-        <div class="collumn" id="esports">
-            <h2>Esports
-                <img src="../img/logo.png">
-            </h2>
-            <ul>
-                <li class="open">open</li>
-            </ul>
-        </div>
-        <div class="collumn" id="topTeam">
-            <h2>Jupiter
-                <img src="../img/jupiter_emoji.png">
-            </h2>
-            <ul>
-                <li class="cap"><a href="https://twitter.com/its_Xynal" target="_blank">Xynal <i class="fab fa-twitter"></i></a></li>
-                <li class="open">open</li>
-                <li class="open">open</li>
-            </ul>
-        </div>
-        <div class="collumn" id="topTeam">
-            <h2>Venus
-                <img src="../img/venus_emoji.png">
-            </h2>
-            <ul>
-            <li class="cap"><a href="https://twitter.com/JonasBaecker" target="_blank">Snips <i class="fab fa-twitter"></i></a></li>
-                <li class="open">open</li>
-                <li class="open">open</li>
-            </ul>
-        </div>
-        <div class="collumn">
-            <h2>Saturn
-                <img src="../img/saturn_emoji.png">
-            </h2>
-            <ul>
-                <li class="cap"><a href="https://twitter.com/AnacaPlays" target="_blank">Anaca <i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://twitter.com/sv_pigey" target="_blank">sv_pigey <i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://twitter.com/" target="_blank">Zillion <i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </div>
-        <div class="collumn">
-            <h2>Neptune
-                <img src="../img/neptune_emoji.png">
-            </h2>
-            <ul>
-                <li class="cap"><a href="https://twitter.com/Reen_rl" target="_blank">Reen <i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://twitter.com/Ju4life" target="_blank">Ju4life <i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://twitter.com/VenniinaRL" target="_blank">Venni <i class="fab fa-twitter"></i></a></li>
-                <li>Jimmy</li>
-                <li><a href="https://twitter.com/Neyzexrl" target="_blank">Neyzex <i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </div>
-        <div class="collumn">
-            <h2>Pluto
-                <img src="../img/pluto_emoji.png">
-            </h2>
-            <ul>
-                <li class="cap"><a href="https://twitter.com/BlitzLeague_" target="_blank">BlitzLeague <i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://twitter.com/Jariz_RL" target="_blank">Jariz <i class="fab fa-twitter" target="_blank"></i></a></li>
-                <li><a href="https://twitter.com/TheBestPikachu" target="_blank">Cookies <i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://twitter.com/axdux_rl" target="_blank">Axdux <i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </div>
-        <div class="collumn">
-            <h2>Mars
-                <img src="../img/rook_emoji.png">
-            </h2>
-            <ul>
-                <li class="cap"><a href="https://twitter.com/GalacticQ_" target="_blank">GalacticQ <i class="fab fa-twitter"></i></a></li>
-                <li>Kunisay</li>
-                <li>Callum</li>
-            </ul>
-        </div>
-    </div>
 
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && $isAdmin) {
+
+            for ($j = 0; $j < count($json["teams"]); $j++) {
+                $teamJson = $json["teams"][$j];
+                $teamName = $teamJson["teamName"];
+
+                for ($i = 0; $i < count($teamJson["players"]); $i++) {
+                    $player = $teamJson["players"][$i];
+                    $tagname = $teamName . '_' . $i;
+
+                    $playerNamePost = $_POST[$tagname];
+                    $playerSocialPost = $_POST[$tagname . '_social'];
+
+                    $json["teams"][$j]["players"][$i]["name"] = $playerNamePost == null ? "" : $playerNamePost;
+                    $json["teams"][$j]["players"][$i]["social"] = $playerSocialPost == null ? "" : $playerSocialPost;
+                }
+            }
+
+            if ($json != null) {
+                $jsonText = json_encode($json);
+                file_put_contents("rl-teams.json", $jsonText);
+            }
+        }
+
+
+
+
+
+        $tag = "li ";
+
+        if ($isEdit) {
+            $tag = "textarea ";
+
+            echo '
+            <form action="' . $_SERVER['PHP_SELF'] . '" method="post">
+            ';
+        }
+
+        for ($j = 0; $j < count($json["teams"]); $j++) {
+            $teamJson = $json["teams"][$j];
+
+            $teamName = $teamJson["teamName"];
+
+            if ($j == 0) {
+                echo '<div class="collumn" id="esports">';
+            } else if ($j == 1 || $j == 2) {
+                echo '<div class="collumn" id="TopTeam">';
+            } else {
+                echo '<div class="collumn">';
+            }
+
+            echo '
+            <h2>
+               ' . $teamJson["teamName"] . '
+                <img src="../img/' . $teamJson["teamLogo"] . '">
+            </h2>
+            <ul>';
+
+            for ($i = 0; $i < count($teamJson["players"]); $i++) {
+                $player = $teamJson["players"][$i];
+                $tagname = 'name="' . $teamName . '_' . $i . '';
+
+                if ($player["name"] == "open") {
+                    echo '
+                    <' . $tag . ' class="open"' . $tagname . '" >open</' . $tag . '>
+                     ';
+                } else if ($player["name"] == "") {
+                    if (!$isEdit) {
+                        continue;
+                    } else {
+                        echo '
+                        <textarea ' . $tagname . '" ></textarea>
+                         ';
+                    }
+                } else if ($player["social"] == "") {
+                    if ($i == 0) {
+                        echo '
+                    <' . $tag . ' ' . $tagname . '" class="cap">' . $player["name"] . '</' . $tag . '>
+                     ';
+                    } else {
+                        echo '
+                    <' . $tag . ' ' . $tagname . '">' . $player["name"] . '</' . $tag . '>
+                    ';
+                    }
+                } else {
+                    if ($isEdit) {
+                        echo '
+                        <textarea ' . $tagname . '">'  . $player["name"] . '</textarea>
+                        ';
+                    } else {
+                        $socialDomain = str_ireplace('www.', '', parse_url($player['social'], PHP_URL_HOST));
+                        $social = explode('.', $socialDomain)[0];
+                        if ($i == 0) {
+                            echo '
+                        <li class="cap"><a href="' . $player["social"] . '" target="_blank">' . $player["name"] . ' <i class="fab fa-' . $social . '"></i></a></li>
+                     ';
+                        } else {
+                            echo '
+                        <li><a href="' . $player["social"] . '" target="_blank">' . $player["name"] . ' <i class="fab fa-' . $social . '"></i></a></li>
+                    ';
+                        }
+                    }
+                }
+                if ($isEdit) {
+                    echo '
+                    <textarea class="socialTextArea" ' . $tagname . '_social">'  . $player["social"] . '</textarea><br>
+                    ';
+                }
+            }
+
+            echo '
+            </ul>
+            </div>
+            ';
+        }
+        ?>
+    </div>
+    <div class="buttons">
+        <?php
+        if ($isAdmin) {
+            if (!$isEdit) {
+                echo '<a class="editButton" href="?action=edit">edit</a>';
+            } else {
+
+                echo '<a class="editButton" href="?action=cancel">Cancel</a>';
+                echo  '<input class="saveButton" type="submit" name="button" value="Save"/></form>';
+            }
+        }
+        ?>
+    </div>
 
     <!--- footer -->
     <?php require_once "../footer.html" ?>
+
+
+
 
 </body>
 

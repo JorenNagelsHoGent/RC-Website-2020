@@ -53,7 +53,7 @@ if (get('action') == 'logout') {
 	header('Location: https://rocketcore.gg');
 }
 
-function apiRequest($url, $post = FALSE, $headers = array())
+function apiRequest($url, $post, $headers = array())
 {
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);

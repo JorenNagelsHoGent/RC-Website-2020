@@ -53,7 +53,7 @@ if (get('action') == 'logout') {
     header('Location: https://rocketcore.gg');
 }
 
-function apiRequest($url, $post = FALSE, $headers = array())
+function apiRequest($url, $post, $headers = array())
 {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
@@ -152,7 +152,7 @@ function session($key, $default = NULL)
             <div class="info">
                 <header>We are currently not hosting any events!</header>
                 <div class="description">
-                    <br>
+                <br>
                 Follow us on Social Media to stay up to date about any upcoming events
 
                 </div>
